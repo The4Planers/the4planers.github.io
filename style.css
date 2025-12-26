@@ -1,4 +1,11 @@
-/* Video background */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* 🔹 Video background */
 #bg-video {
   position: fixed;
   top: 0;
@@ -6,72 +13,89 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
+  z-index: -2;
 }
 
-/* Website content */
-.content {
-  position: relative;
-  z-index: 1;
-  color: white;
-  text-align: center;
-  margin-top: 40vh;
-  font-family: Arial, sans-serif;
-}
-/* Dark overlay on video */
+/* 🔹 Dark overlay */
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: -1;
 }
 
-/* Main content */
-.content {
-  position: relative;
-  z-index: 1;
+/* 🔹 Hero */
+.hero {
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  margin: 15px 0;
+}
+
+.btn {
+  background: white;
+  color: black;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+/* 🔹 Services */
+.services {
+  background: #111;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.service-box {
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+/* 🔹 Projects */
+.projects {
+  padding: 80px 20px;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.project-card {
+  max-width: 350px;
+  margin: 20px auto;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* 🔹 About */
+.about {
+  padding: 80px 20px;
+  background: #111;
   color: white;
   text-align: center;
-  padding: 60px 20px;
-  font-family: Arial, sans-serif;
 }
 
-.content h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-.tagline {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  opacity: 0.9;
-}
-
-/* Projects layout */
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-/* Project card */
-.card {
-  background: rgba(255, 255, 255, 0.1);
+/* 🔹 Footer */
+footer {
+  background: black;
+  color: white;
+  text-align: center;
   padding: 20px;
-  border-radius: 10px;
-  backdrop-filter: blur(5px);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
-.card h2 {
-  margin-bottom: 10px;
 }
